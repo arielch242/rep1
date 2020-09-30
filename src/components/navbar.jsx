@@ -1,12 +1,16 @@
 import React, { Component } from "react";
+import "../App.css";
 
 class NavBar extends Component {
   state = {};
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="#">
-          Navbar
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style={{ backgroundColor: "#F9EDDB" }}
+      >
+        <a class="navbar-brand display-4" href="#">
+          שו"ת
         </a>
         <button
           class="navbar-toggler"
@@ -17,7 +21,6 @@ class NavBar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          ry
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -33,36 +36,24 @@ class NavBar extends Component {
                 שאל את הרב
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                מאגר שאלות
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </div>
             </li>
           </ul>
-          {/*    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> */}
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                התחבר
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                הרשם
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
     );
