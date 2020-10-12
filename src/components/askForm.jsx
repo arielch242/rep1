@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import Form from './common/form.jsx';
 
-class AskForm extends Component {
+class AskForm extends Form {
   state = {
     data: {
       name: "",
@@ -9,13 +10,6 @@ class AskForm extends Component {
       topic: "",
       article: "",
     },
-  };
-
-  handleChange = ({ currentTarget: input }) => {
-    const data = {...this.state.data};
-    data[input.name]=input.value;
-    console.log(data);
-    this.setState({data});
   };
 
   handleSubmit = (e) => {
@@ -33,49 +27,20 @@ class AskForm extends Component {
             <form
               className="form-inline justify-content-end"
               onSubmit={this.handleSubmit}
-            >
-              <div className="form-group m-3">
-                <label className="control-label" htmlFor="email"></label>
-                <input
-                  id="email"
-                  name="email"
-                  type="text"
-                  placeholder="?מה המייל שלך"
-                  className="form-control input-md text-right"
-                  onChange={this.handleChange}
-                />
-              </div>
-
-              <div className="form-group m-3">
-                <label className="control-label" htmlFor="name"></label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="?איך קוראים לך"
-                  className="form-control input-md text-right"
-                  onChange={this.handleChange}
-                  value={this.state.data.qName}
-                />
-              </div>
+            >  
+              {this.renderInput('name','שם')}
+              {this.renderInput('email','דוא"ל')}
+              {this.renderInput('title','כותרת השאלה')}
+             
               <div className="form-group m-3">
                 <label className="control-label" htmlFor="name"></label>
                 <select dir="rtl" name="askTopic" id="askTopic">
-                  <option value="daily">יום יום</option>
+                  <option value="daily">ענייני יום יום</option>
                   <option value="mammon">ממונות</option>
                   <option value="kashrot">כשרות</option>
                 </select>
               </div>
-              <div className="form-group m-3">
-                <label className="control-label" htmlFor="name"></label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="נושא השאלה"
-                  className="form-control input-md text-right"
-                />
-              </div>
+       
               <textarea className="form-group"
                 name="askArticle"
                 id="askArticle"
