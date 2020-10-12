@@ -3,16 +3,19 @@ import React, { Component } from "react";
 class AskForm extends Component {
   state = {
     data: {
-      qName: "",
-      qEmail: "",
-      qTitle: "",
-      qTopic: "",
-      qArticle: "",
+      name: "",
+      email: "",
+      title: "",
+      topic: "",
+      article: "",
     },
   };
 
-  handleChange = (e) => {
-    console.log(e);
+  handleChange = ({ currentTarget: input }) => {
+    const data = {...this.state.data};
+    data[input.name]=input.value;
+    console.log(data);
+    this.setState({data});
   };
 
   handleSubmit = (e) => {
@@ -23,9 +26,9 @@ class AskForm extends Component {
   render() {
     return (
       <section className="h-100 bg-img">
-        <div className="row">
+        <div className="row"> 
           <div className="col-6 mx-auto">
-            <h1 className="text-white text-center">כתוב שאלתך</h1>
+            <h1 className="text-white text-right">כתוב שאלתך</h1>
 
             <form
               className="form-inline justify-content-end"
@@ -51,6 +54,8 @@ class AskForm extends Component {
                   type="text"
                   placeholder="?איך קוראים לך"
                   className="form-control input-md text-right"
+                  onChange={this.handleChange}
+                  value={this.state.data.qName}
                 />
               </div>
               <div className="form-group m-3">
