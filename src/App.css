@@ -11,3 +11,18 @@
   background-position: center center;
   background-attachment: fixed;
 }
+
+#askTopic {
+  width: 200px;
+  height: 40px;
+  text-align: right;
+}
+
+#askArticle {
+  text-align: right;
+  margin: 15px;
+}
+
+/* #askSubmit{
+  padding-right: 6px !important;
+} */

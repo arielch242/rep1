@@ -6,14 +6,14 @@ class NavBar extends Component {
   render() {
     return (
       <nav
-        class="navbar navbar-expand-lg navbar-light"
+        className="navbar navbar-expand-lg navbar-light"
         style={{ backgroundColor: "#F9EDDB" }}
       >
-        <a class="navbar-brand display-4" href="#">
+        <a className="navbar-brand display-4" href="home.jsx">
           שו"ת
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -21,35 +21,35 @@ class NavBar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                ראשי <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="home.jsx">
+                ראשי <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="ask.jsx">
                 שאל את הרב
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="archive.jsx">
                 מאגר שאלות
               </a>
             </li>
           </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <a className="nav-link" href="signin.jsx">
                 התחבר
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="signup.jsx">
                 הרשם
               </a>
             </li>
