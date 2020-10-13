@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, NavLink } from 'react-router-dom';
 
 
 class NavBar extends Component {
@@ -27,33 +28,33 @@ class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="home.jsx">
+              <Link className="nav-link" to="/">
                 ראשי <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="about.jsx">
+              <NavLink className="nav-link" to="about.jsx">
                 אודות
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="archive.jsx">
+              <NavLink className="nav-link" to="qna.jsx">
                 מאגר שאלות
-              </a>
+              </NavLink>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="qna.jsx">
+              <NavLink className="nav-link" to="signin.jsx">
                 התחבר
-              </a>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="signup.jsx">
+           <li className="nav-item">
+              <NavLink className="nav-link" to="signup.jsx">
                 הרשם
-              </a>
+              </NavLink>
             </li>
-          </ul>
+           </ul>
         </div>
       </nav>
     );

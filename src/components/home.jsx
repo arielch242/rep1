@@ -1,5 +1,6 @@
 import React from "react";
 import Form from './common/form.jsx';
+import PageHeader from "./common/pageHeader.jsx";
 
 class Home extends Form {
   state = {
@@ -19,6 +20,10 @@ class Home extends Form {
 
   render() {
     return (
+      <React.Fragment>
+        <div className="container">
+            <PageHeader titleText="Home"/>
+        </div>
       <section className="h-100 bg-img">
         <div className="row" style={{direction: "rtl"}}> 
           <div className="col-6 mx-auto">
@@ -62,6 +67,7 @@ class Home extends Form {
           </div>
         </div>
       </section>
+      </React.Fragment>
     );
   }
 }

@@ -7,6 +7,7 @@ import Qcard from "./components/qcard.jsx"; */
 import Footer from "./components/footer.jsx";
 import About from "./components/about.jsx";
 import Home from "./components/home.jsx";
+import Signup from "./components/signup.jsx";
 import { Route , Switch } from 'react-router-dom';
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       <main className="container-fluid flex-fill">
         <Switch>
           <Route path="/about" component={About} />
-          <Route path="/" exact component={Home} />    
+          <Route path="/signup" component={Signup} />
+          <Route exact path="/" component={Home} />    
         </Switch>
       </main>
       <footer>
