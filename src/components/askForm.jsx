@@ -20,12 +20,12 @@ class AskForm extends Form {
   render() {
     return (
       <section className="h-100 bg-img">
-        <div className="row"> 
+        <div className="row" style={{direction: "rtl"}}> 
           <div className="col-6 mx-auto">
             <h1 className="text-white text-right">כתוב שאלתך</h1>
 
             <form
-              className="form-inline justify-content-end"
+              className="form"
               onSubmit={this.handleSubmit}
             >  
               {this.renderInput('name','שם')}

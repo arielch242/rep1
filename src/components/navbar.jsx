@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "../App.css";
+
 
 class NavBar extends Component {
   state = {};
   render() {
     return (
       <nav
-        className="navbar navbar-expand-lg navbar-light"
+        className="navbar navbar-expand-lg navbar-light shadow-sm"
         style={{ backgroundColor: "#F9EDDB" }}
       >
         <a className="navbar-brand display-4" href="home.jsx">
@@ -32,8 +32,8 @@ class NavBar extends Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="ask.jsx">
-                שאל את הרב
+              <a className="nav-link" href="about.jsx">
+                אודות
               </a>
             </li>
             <li className="nav-item">
@@ -44,7 +44,7 @@ class NavBar extends Component {
           </ul>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="signin.jsx">
+              <a className="nav-link" href="qna.jsx">
                 התחבר
               </a>
             </li>
