@@ -1,8 +1,12 @@
 
+# 6:Show errors
+add errors to functions handleSubmit and Validate
+
 # 6:Validation
 install joi-browser + import
 create schema {signup.jsx}
 create validation function {form.jsx} + errors
+
 
 # 6:handleChange
 function handleChange

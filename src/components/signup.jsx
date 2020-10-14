@@ -17,6 +17,10 @@ class Signup extends Form {
           name:Joi.string().required().min(2).label('Name'),
       };
 
+      doSubmit(){
+          console.log('submitted ',this.state);
+      }
+
     render() { 
         return ( 
             <div className="container h-100 bg-img">
