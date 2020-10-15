@@ -1,9 +1,22 @@
+# 7: Disable RenderButton till validate OK
+add disabled prop to RenderButton 
+
+# 7: Cors
+require "Cors" - enable access from different ports
+app.use Cors
+useCreateIndex: true,
+
+# 7: Add Rest API
+add rest-api zip
+
 # 6: Validate Property
 add validateProperty function
 add error validation per property on HandleChange
 setState errors obj on HandleChange
 add error field on renderInput
 add error HTML on Input.jsx
+set errors:{} on askForm
+
 
 # 6:Show errors
 add errors to functions handleSubmit and Validate

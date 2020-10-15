@@ -10,6 +10,7 @@ class AskForm extends Form {
       topic: "",
       article: "",
     },
+    errors:{}
   };
 
   handleSubmit = (e) => {

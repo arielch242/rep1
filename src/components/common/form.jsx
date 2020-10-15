@@ -48,7 +48,7 @@ class Form extends Component {
       };
 
     renderInput(name, placeholder, type="text"){
-        const {data, errors} = this.state;
+        const {data,errors} = this.state;
         return (
             <Input
             type={type}
@@ -63,7 +63,7 @@ class Form extends Component {
     }
 
     renderButton(label){
-        return <button className="btn btn-primary pl-4">{label}</button>;
+        return <button className="btn btn-primary pl-4" disabled={this.validate()}>{label}</button>;
     }
 
 }
