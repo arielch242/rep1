@@ -1,3 +1,9 @@
+# 7:config
+create config.json which sets the Api Url
+
+# 7: Axios
+install Axios package
+
 # 7: Disable RenderButton till validate OK
 add disabled prop to RenderButton 
 
