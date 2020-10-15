@@ -1,6 +1,11 @@
+# 6: Validate Property
+add validateProperty function
+add error validation per property on HandleChange
+add errors obj to setState on HandleChange
 
 # 6:Show errors
 add errors to functions handleSubmit and Validate
+add errors object to state
 
 # 6:Validation
 install joi-browser + import

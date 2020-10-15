@@ -9,12 +9,13 @@ class Signup extends Form {
           email: "",
           password: "",
         },
+        errors:{}
       };
 
       schema = {
-          email: Joi.string().required().email().label('Email'),
-          password:Joi.string().required().min(6).label('Password'),
-          name:Joi.string().required().min(2).label('Name'),
+          email: Joi.string().required().email().label('email'),
+          password:Joi.string().required().min(6).label('password'),
+          name:Joi.string().required().min(2).label('name'),
       };
 
       doSubmit(){
@@ -32,9 +33,9 @@ class Signup extends Form {
                 <div className="row">
                     <div className="col-lg-6 mx-auto text-right">
                         <form onSubmit={this.handleSubmit}>
-                            {this.renderInput('Name','שם')}
-                            {this.renderInput('Email','דוא"ל')}
-                            {this.renderInput('Password','סיסמה')}
+                            {this.renderInput('name','שם')}
+                            {this.renderInput('email','דוא"ל')}
+                            {this.renderInput('password','סיסמה')}
                             {this.renderButton('שלח')}
                         </form>
                     </div>
