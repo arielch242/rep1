@@ -1,7 +1,9 @@
 # 6: Validate Property
 add validateProperty function
 add error validation per property on HandleChange
-add errors obj to setState on HandleChange
+setState errors obj on HandleChange
+add error field on renderInput
+add error HTML on Input.jsx
 
 # 6:Show errors
 add errors to functions handleSubmit and Validate
