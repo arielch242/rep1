@@ -1,64 +1,84 @@
+
+# 7: Toastify
+install the package
+
+# 7: doSubmit
+edit doSubmit func
+pull history & location from this.props ( 2 parameters which are passed by BrowerRouter to the Route)
+add async-await
+handling error status 400 (already registered)
+add login errors object (to a copy): ...this.state.errors
+
+
 # 7:config
+
 create config.json which sets the Api Url
 
 # 7: Axios
+
 install Axios package
 
 # 7: Disable RenderButton till validate OK
-add disabled prop to RenderButton 
+add disabled prop to RenderButton
 
 # 7: Cors
+
 require "Cors" - enable access from different ports
 app.use Cors
 useCreateIndex: true,
 
 # 7: Add Rest API
+
 add rest-api zip
 
 # 6: Validate Property
+
 add validateProperty function
 add error validation per property on HandleChange
 setState errors obj on HandleChange
 add error field on renderInput
 add error HTML on Input.jsx
-set errors:{} on askForm
-
+set errors:{} on Home.jsx
 
 # 6:Show errors
+
 add errors to functions handleSubmit and Validate
 add errors object to state
 
 # 6:Validation
+
 install joi-browser + import
 create schema {signup.jsx}
 create validation function {form.jsx} + errors
 
-
 # 6:handleChange
+
 function handleChange
 
 # 6: Rendering
+
 signup.jsx change Component extends to Form
 add render functions on form.jsx
 
-# 6: Routing step2 
+# 6: Routing step2
+
 navbar.jsx
 change a to Link/NavLink
 
-
 # 6: Routing step1
+
 app.js
 import {Route,Switch} from 'react-router-dom';
 
 Switch>
-          Route path="/about" component={About} />
-          Route path="/" component={Home}/>    
+Route path="/about" component={About} />
+Route path="/" component={Home}/>  
 /Switch>
 
 # 6: Create Router dom
-install package react-router-dom
-import {BrowserRouter} from 'react-router-dom';     - index.js
 
+install package react-router-dom
+import {BrowserRouter} from 'react-router-dom'; - index.js
 
 # 5: create Footer & Header
 

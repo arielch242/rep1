@@ -9,6 +9,8 @@ import About from "./components/about.jsx";
 import Home from "./components/home.jsx";
 import Signup from "./components/signup.jsx";
 import { Route , Switch } from 'react-router-dom';
+import { ToastContainer} from 'react-Toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

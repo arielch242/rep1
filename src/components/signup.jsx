@@ -1,6 +1,11 @@
 import React from 'react';
-import Form from './common/form';
 import Joi from 'joi-browser';
+
+import {apiUrl} from '../config.json';
+import http from '../services/httpService'
+
+import PageHeader from './common/pageHeader';
+import Form from './common/form';
 
 class Signup extends Form {
     state = {
@@ -18,18 +23,30 @@ class Signup extends Form {
           name:Joi.string().required().min(2).label('name'),
       };
 
-      doSubmit(){
-          console.log('submitted ',this.state);
+      async doSubmit(){
+          const {history,location} = this.props;
+          const data = {...this.state.data,biz:false};
+          try{
+          console.log(`${apiUrl}/users`);
+          await http.post(`${apiUrl}/users`,data);
+          history.replace("/");
+          } catch (error){
+              if( error.response && error.response.status === 400){
+                this.setState({
+                    errors:{
+                        ...this.state.errors,
+                        email:"Email is already registered",
+                },
+               });
+              }
+          }
+
       }
 
     render() { 
         return ( 
             <div className="container h-100 bg-img">
-                <div className="row">
-                    <div className="col-12 mt-4">
-                        <h1 className="text-white text-center">הירשם</h1>
-                    </div>
-                </div>
+                <PageHeader titletext="Sign Up"/>
                 <div className="row">
                     <div className="col-lg-6 mx-auto text-right">
                         <form onSubmit={this.handleSubmit}>
