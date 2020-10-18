@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component }from "react";
 import "./App.css";
 import NavBar from "./components/navbar.jsx";
 /* import QnA from "./components/qna";
@@ -13,8 +13,18 @@ import { Route , Switch } from 'react-router-dom';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AskForm from "./components/askForm";
+import { render } from "@testing-library/react";
+import userService from "./services/userService";
 
-function App() {
+class App extends Component () {
+  state = {};
+
+  componentDidMount () {
+    const user = userService.getCurrentUser();
+    this.setState({user});
+  }
+
+  render(){
   return (
     <div className="d-flex flex-column min-vh-100">
       <ToastContainer/>
@@ -35,6 +45,7 @@ function App() {
       </footer>
     </div>
   );
+  }
 }
 
 export default App;

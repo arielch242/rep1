@@ -1,3 +1,11 @@
+# 8:JWT
+userService.js
+login function - save user token
+npm i jwt-decode
+getCurrentUser - decode token
+( app.jsx ) 
+in order to use state to determine if user is logged in : change to class & componentDidMount get user and setState
+
 # 7:SignIn Page
 crate signin component
 create userService.js to handle with token
