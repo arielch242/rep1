@@ -1,5 +1,6 @@
 import React from 'react';
 import Joi from 'joi-browser';
+import {toast} from 'react-toastify';
 
 import {apiUrl} from '../config.json';
 import http from '../services/httpService'
@@ -27,8 +28,8 @@ class Signup extends Form {
           const {history,location} = this.props;
           const data = {...this.state.data,biz:false};
           try{
-          console.log(`${apiUrl}/users`);
           await http.post(`${apiUrl}/users`,data);
+          toast('נפתח חשבון חדש');
           history.replace("/");
           } catch (error){
               if( error.response && error.response.status === 400){
@@ -45,7 +46,7 @@ class Signup extends Form {
 
     render() { 
         return ( 
-            <div className="container h-100 bg-img">
+            <div className="container min-vh-100 bg-img">
                 <PageHeader titletext="Sign Up"/>
                 <div className="row">
                     <div className="col-lg-6 mx-auto text-right">

@@ -1,3 +1,5 @@
+# 7: Interceptors
+httpservice.js - add error handling on server side
 
 # 7: Toastify
 install the package

@@ -9,12 +9,14 @@ import About from "./components/about.jsx";
 import Home from "./components/home.jsx";
 import Signup from "./components/signup.jsx";
 import { Route , Switch } from 'react-router-dom';
-import { ToastContainer} from 'react-Toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AskForm from "./components/askForm";
 
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
+      <ToastContainer/>
       <header>
         <NavBar />
       </header>
@@ -22,6 +24,7 @@ function App() {
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/signup" component={Signup} />
+          <Route path="/askForm" component={AskForm} />
           <Route exact path="/" component={Home} />    
         </Switch>
       </main>
