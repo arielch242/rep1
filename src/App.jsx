@@ -15,16 +15,17 @@ import AskForm from "./components/askForm";
 import userService from "./services/userService";
 import Logout from "./components/logout";
 
-class App extends Component () {
-  state = {};
-
-  componentDidMount () {
-    const user = userService.getCurrentUser();
-    this.setState({user});
-  }
-
-  render(){
-  const {user} = this.state;
+class App extends Component {
+    state = {};
+    
+    componentDidMount(){
+      const user = userService.getCurrentUser();
+      this.setState({user})
+  
+    }
+  
+    render() {
+      const {user} = this.state
   return (
     <div className="d-flex flex-column min-vh-100">
       <ToastContainer/>

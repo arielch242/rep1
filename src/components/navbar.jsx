@@ -45,6 +45,9 @@ class NavBar extends Component {
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
+            {/* if user is loggod out */}
+            {!user && ( 
+              <React.Fragment>
             <li className="nav-item">
               <NavLink className="nav-link" to="/signin">
                 התחבר
@@ -55,6 +58,19 @@ class NavBar extends Component {
                 הרשם
               </NavLink>
             </li>
+            </React.Fragment>
+            )
+            }
+            {/* if user is logged */}
+            {user && (
+              <React.Fragment>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/logout">
+                    Logout
+                  </NavLink>
+                </li>
+              </React.Fragment>
+            )}
            </ul>
         </div>
       </nav>

@@ -14,6 +14,7 @@ getCurrentUser - decode token
 in order to use state to determine if user is logged in : change to class & componentDidMount get user and setState
 give user status to navbar
 
+
 # 7:SignIn Page
 crate signin component
 create userService.js to handle with token
