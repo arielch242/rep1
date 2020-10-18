@@ -5,8 +5,8 @@ class About extends Component {
     state = {  }
     render() { 
         return ( 
-            <div className="container min-vh-100">
-                <PageHeader titleText="About us"/>
+            <div className="container min-vh-100 bg-img text-white text-right">
+                <PageHeader titleText="אודות"/>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem at rem a vitae tempore quis hic non cupiditate exercitationem quae?</p>
             </div>
          );

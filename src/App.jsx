@@ -8,6 +8,7 @@ import Footer from "./components/footer.jsx";
 import About from "./components/about.jsx";
 import Home from "./components/home.jsx";
 import Signup from "./components/signup.jsx";
+import Signin from "./components/signin.jsx";
 import { Route , Switch } from 'react-router-dom';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,6 +25,7 @@ function App() {
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/signup" component={Signup} />
+          <Route path="/signin" component={Signin} />
           <Route path="/askForm" component={AskForm} />
           <Route exact path="/" component={Home} />    
         </Switch>

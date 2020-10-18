@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="container bg-img min-vh-100 text-white text-right my-5">
-          <PageHeader titleText="Home"/>
+          <PageHeader titleText="ראשי"/>
           <h1 className="display-4">ברוכים הבאים לאתר המקוון שאלות ותשובות של בית ההוראה נחלי צדק</h1>
         </div>
       </React.Fragment>

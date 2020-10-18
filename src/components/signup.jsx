@@ -30,7 +30,7 @@ class Signup extends Form {
           try{
           await http.post(`${apiUrl}/users`,data);
           toast('נפתח חשבון חדש');
-          history.replace("/");
+          history.replace("/signin");
           } catch (error){
               if( error.response && error.response.status === 400){
                 this.setState({
@@ -46,8 +46,8 @@ class Signup extends Form {
 
     render() { 
         return ( 
-            <div className="container min-vh-100 bg-img">
-                <PageHeader titletext="Sign Up"/>
+            <div className="container min-vh-100 bg-img text-white text-right">
+            <PageHeader titleText="הרשמה"/>
                 <div className="row">
                     <div className="col-lg-6 mx-auto text-right">
                         <form onSubmit={this.handleSubmit}>
