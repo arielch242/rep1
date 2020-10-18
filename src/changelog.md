@@ -1,3 +1,10 @@
+
+# 8: Logout
+create logout  - component + function on userService.js  
+
+# 8:change navbar
+different menu if logged in or out
+
 # 8:JWT
 userService.js
 login function - save user token
@@ -5,6 +12,7 @@ npm i jwt-decode
 getCurrentUser - decode token
 ( app.jsx ) 
 in order to use state to determine if user is logged in : change to class & componentDidMount get user and setState
+give user status to navbar
 
 # 7:SignIn Page
 crate signin component

@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AskForm from "./components/askForm";
 import { render } from "@testing-library/react";
 import userService from "./services/userService";
+import Logout from "./components/logout";
 
 class App extends Component () {
   state = {};
@@ -25,17 +26,19 @@ class App extends Component () {
   }
 
   render(){
+  const {user} = this.state;
   return (
     <div className="d-flex flex-column min-vh-100">
       <ToastContainer/>
       <header>
-        <NavBar />
+        <NavBar user ={user}/>
       </header>
       <main className="container-fluid flex-fill">
         <Switch>
-          <Route path="/about" component={About} />
+          <Route path="/logout" component={Logout} />
           <Route path="/signup" component={Signup} />
           <Route path="/signin" component={Signin} />
+          <Route path="/about" component={About} />
           <Route path="/askForm" component={AskForm} />
           <Route exact path="/" component={Home} />    
         </Switch>
