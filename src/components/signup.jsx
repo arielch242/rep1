@@ -25,7 +25,7 @@ class Signup extends Form {
       };
 
       async doSubmit(){
-          const {history,location} = this.props;
+          const {history} = this.props;
           const data = {...this.state.data,biz:false};
           try{
           await http.post(`${apiUrl}/users`,data);

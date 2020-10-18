@@ -2,7 +2,6 @@ import React, { Component }from "react";
 import "./App.css";
 import NavBar from "./components/navbar.jsx";
 /* import QnA from "./components/qna";
-import AskForm from "./components/askForm.jsx";
 import Qcard from "./components/qcard.jsx"; */
 import Footer from "./components/footer.jsx";
 import About from "./components/about.jsx";
@@ -13,7 +12,6 @@ import { Route , Switch } from 'react-router-dom';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AskForm from "./components/askForm";
-import { render } from "@testing-library/react";
 import userService from "./services/userService";
 import Logout from "./components/logout";
 
@@ -31,7 +29,7 @@ class App extends Component () {
     <div className="d-flex flex-column min-vh-100">
       <ToastContainer/>
       <header>
-        <NavBar user ={user}/>
+        <NavBar user={user}/>
       </header>
       <main className="container-fluid flex-fill">
         <Switch>

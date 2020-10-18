@@ -5,7 +5,8 @@ import { Link, NavLink } from 'react-router-dom';
 class NavBar extends Component {
   state = {};
   render() {
-    const {user} = this.props;
+    console.log(this.props);
+    const {user} = this.props; 
     return (
       <nav
         className="navbar navbar-expand-lg navbar-light shadow-sm"
@@ -44,8 +45,10 @@ class NavBar extends Component {
               </NavLink>
             </li>
           </ul>
+          
           <ul className="navbar-nav ml-auto">
-            {{/* if user is loggod out */}}
+
+          {/* if user is loggod out */}
             {!user && ( 
               <React.Fragment>
             <li className="nav-item">
@@ -72,6 +75,8 @@ class NavBar extends Component {
               </React.Fragment>
             )}
            </ul>
+           
+
         </div>
       </nav>
     );
