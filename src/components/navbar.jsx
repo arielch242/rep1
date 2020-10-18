@@ -5,9 +5,8 @@ import { Link, NavLink } from 'react-router-dom';
 class NavBar extends Component {
   state = {};
   render() {
-    console.log(this.props);
     const {user} = this.props; 
-    return (
+        return (
       <nav
         className="navbar navbar-expand-lg navbar-light shadow-sm"
         style={{ backgroundColor: "#F9EDDB" }}
@@ -45,12 +44,7 @@ class NavBar extends Component {
               </NavLink>
             </li>
           </ul>
-          
           <ul className="navbar-nav ml-auto">
-
-          {/* if user is loggod out */}
-            {!user && ( 
-              <React.Fragment>
             <li className="nav-item">
               <NavLink className="nav-link" to="/signin">
                 התחבר
@@ -61,22 +55,7 @@ class NavBar extends Component {
                 הרשם
               </NavLink>
             </li>
-            </React.Fragment>
-            )
-            }
-            {/* if user is logged */}
-            {user && (
-              <React.Fragment>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/logout">
-                    Logout
-                  </NavLink>
-                </li>
-              </React.Fragment>
-            )}
            </ul>
-           
-
         </div>
       </nav>
     );
