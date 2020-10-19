@@ -1,6 +1,6 @@
 import React from 'react';
 import Joi from 'joi-browser';
-import {toast} from 'react-toastify';
+//import {toast} from 'react-toastify';
 
 import {apiUrl} from '../config.json';
 import http from '../services/httpService'
@@ -27,6 +27,7 @@ class AuthorSignup extends Form {
 
       async doSubmit(){
           const data = {...this.state.data,biz:true};
+          await http.post(`${apiUrl}/users`,data);
           await userService.login(data.email,data.password);
           window.location = "/create-card";
           try{
@@ -55,7 +56,7 @@ class AuthorSignup extends Form {
                 </div>
                 <div className="row">
                     <div className="col-lg-6 mx-auto text-right">
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} autoComplete="off" noValidate>
                             {this.renderInput('name','שם')}
                             {this.renderInput('email','דוא"ל')}
                             {this.renderInput('password','סיסמה')}

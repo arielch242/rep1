@@ -1,4 +1,10 @@
 
+# 8:Create card
+create component
+
+# 8: Authour Signup
+create component for it and update other component 
+
 # 8: Logout
 create logout  - component + function on userService.js  
 

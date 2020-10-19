@@ -18,8 +18,9 @@ export function getCurrentUser(){
 }
 
 export async function login(email,password){
-    const {data} = await http.post(`${apiUrl}/auth`,{email,password})
-    localStorage.setItem(tokenKey,data.token)
+    console.log(email,password,apiUrl);
+    const {data} = await http.post(`${apiUrl}/auth`,{email,password});
+    localStorage.setItem(tokenKey,data.token);
 
 }
 
