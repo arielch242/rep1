@@ -49,6 +49,11 @@ class NavBar extends Component {
             {!user && ( 
               <React.Fragment>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/authorSignup">
+                כניסה למשיב
+              </NavLink>
+            </li>    
+            <li className="nav-item">
               <NavLink className="nav-link" to="/signin">
                 התחבר
               </NavLink>
