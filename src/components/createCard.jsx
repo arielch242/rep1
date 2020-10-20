@@ -12,7 +12,7 @@ class CreateCard extends Form {
             bizDescription: "",
             bizAddress: "",
             bizPhone: "",
-            bizImage: ""
+       //     bizImage: ""
         },
         errors:{}
      };
@@ -22,15 +22,15 @@ class CreateCard extends Form {
         bizDescription:  Joi.string().min(2).max(1024).required().label('Description'),
         bizAddress:  Joi.string().min(2).max(400).required().label('Address'),
         bizPhone:  Joi.string().min(9).max(10).required().regex(/^0[2-9]\d{7,8}$/).label('Phone'),
-        bizImage:  Joi.string().min(11).max(1024).uri().allow("").label('Image')
+     //   bizImage:  Joi.string().min(11).max(1024).uri().allow("").label('Image')
      };
 
      doSubmit = async () => {
      const {data} = { ...this.state };
-   /*   if(!data.bizImage) { 
+    /*  if(!data.bizImage) { 
          delete data.bizImage;      } */
       await cardService.createCard(data);
-      this.props.history.replace("/about"); 
+      this.props.history.replace("/"); 
     };
 
     render() { 

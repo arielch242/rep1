@@ -27,8 +27,10 @@ class AuthorSignup extends Form {
 
       async doSubmit(){
           const data = {...this.state.data,biz:true};
+          console.log(data);
           await http.post(`${apiUrl}/users`,data);
           await userService.login(data.email,data.password);
+          console.log(userService.login(data.email,data.password));
           window.location = "/create-card";
           try{
           await http.post(`${apiUrl}/users`,data);
