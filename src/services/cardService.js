@@ -5,4 +5,10 @@ export function createCard(card){
     return http.post(`${apiUrl}/cards`,card);
 }
 
-export default {createCard} ;
+export function getMyCards(){
+    return http.get(`${apiUrl}/cards`);
+}
+
+export default {createCard,
+                getMyCards               
+ } ;

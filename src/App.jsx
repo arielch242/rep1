@@ -16,6 +16,7 @@ import userService from "./services/userService";
 import Logout from "./components/logout";
 import AuthorSignup from "./components/authorSignup";
 import CreateCard from "./components/createCard.jsx";
+import QnA from "./components/qna";
 
 class App extends Component {
     state = {};
@@ -42,6 +43,7 @@ class App extends Component {
           <Route path="/signup" component={Signup} />
           <Route path="/signin" component={Signin} />
           <Route path="/about" component={About} />
+          <Route path="/qna" component={QnA}/>
           <Route path="/askForm" component={AskForm} />
           <Route exact path="/" component={Home} />    
         </Switch>

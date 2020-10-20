@@ -1,8 +1,11 @@
+# 9:Get cards
+create myCards page
+create a function to get cards from DB  (cardService.js)
 
-# 8:Create card
-create component
+# 9:Create card
+create component and services and save cards on DB
 
-# 8: Authour Signup
+# 9: Authour Signup
 create component for it and update other component 
 
 # 8: Logout
