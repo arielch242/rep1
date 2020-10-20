@@ -7,7 +7,9 @@ import PageHeader from './common/pageHeader';
 /* import Qcard from './qcard';
  */
 class QnA extends Component {
-    state = {  }
+    state = { 
+        cards:[]
+     }
 
 async componentDidMount(){
     const { data } = await cardService.getMyCards();
@@ -19,7 +21,7 @@ async componentDidMount(){
 
     render() { 
         const { cards } = this.state;
-        console.log(cards);
+      //  console.log(typeof cards);
         return ( 
             <div className="container">
                 <PageHeader titleText="שאלות ותשובות"/>
