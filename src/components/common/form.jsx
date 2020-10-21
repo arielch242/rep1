@@ -1,20 +1,5 @@
 import React, { Component } from 'react';
 import Input from "./input.jsx";
-<<<<<<< HEAD
-
-class Form extends Component {
-    state = {  }
-    
-    handleChange = ({ currentTarget: input }) => {
-        const data = {...this.state.data};
-        data[input.name]=input.value;
-        console.log(data);
-        this.setState({data});
-      };
-
-    renderInput(name, placeholder, type="text"){
-        const {data} = this.state;
-=======
 import Joi from 'joi-browser';
 
 class Form extends Component {
@@ -64,7 +49,6 @@ class Form extends Component {
 
     renderInput(name, placeholder, type="text"){
         const {data,errors} = this.state;
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
         return (
             <Input
             type={type}
@@ -73,20 +57,14 @@ class Form extends Component {
             placeholder={placeholder}
             onChange={this.handleChange}
             value={data[name]}
-<<<<<<< HEAD
-=======
             error={errors[name]}
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
             />
         )
     }
 
-<<<<<<< HEAD
-=======
     renderButton(label){
         return <button className="btn btn-primary pl-4" disabled={this.validate()}>{label}</button>;
     }
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
 
 }
  

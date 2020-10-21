@@ -3,7 +3,8 @@ import Form from './common/form'
 import PageHeader from './common/pageHeader';
 import Joi from 'joi-browser';
 import cardService from '../services/cardService';
-//import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
+
 
 class EditCard extends Form {
     state = { 
@@ -24,14 +25,33 @@ class EditCard extends Form {
         bizPhone:  Joi.string().min(9).max(10).required().regex(/^0[2-9]\d{7,8}$/).label('Phone'),
      //   bizImage:  Joi.string().min(11).max(1024).uri().allow("").label('Image')
      };
+     
+     mapToViewModel(card){
+         return {
+            _id:card._id,
+            bizName:card.bizName,
+            bizDescription : card.bizDescription,
+         }
+     }
+
+     async componentDidMount(){
+         const cardId = this.props.match.params.id;
+         const {data} = await cardService.getCard(cardId);
+         this.setState({ data : this.mapToViewModel(data)})
+     }
 
      doSubmit = async () => {
      const {data} = { ...this.state };
     /*  if(!data.bizImage) { 
          delete data.bizImage;      } */
-      await cardService.createCard(data);
-      this.props.history.replace("/"); 
+      await cardService.setCard(data);
+      toast('card was updated');
+      this.props.history.replace("/my-cards"); 
     };
+
+    handleCancel = () => {
+        this.props.history.push("/my-cards");
+    }
 
     render() { 
         return (  
@@ -50,7 +70,9 @@ class EditCard extends Form {
                     {this.renderInput('bizAddress','Business Address')}
                     {this.renderInput('bizPhone','Business Phone')}
                     {this.renderInput('bizImage','Business Image')}
-                    {this.renderButton("Create Card")}
+                    {this.renderButton("Update Card")}
+                    <button className="btn btn-secondary ml-2" onClick={this.handleCancel}>
+                        handleCancel</button>
                         </form>
                     </div>
                 </div>
@@ -59,4 +81,4 @@ class EditCard extends Form {
     }
 }
  
-export default CreateCard;
+export default EditCard;

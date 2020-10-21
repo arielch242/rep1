@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import PageHeader from './common/pageHeader';
-
-class Signup extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div className="container">
-                <PageHeader titleText="Signup"/>
-            </div>
-=======
 import React from 'react';
 import Joi from 'joi-browser';
 import {toast} from 'react-toastify';
@@ -72,7 +60,7 @@ class Signup extends Form {
                 </div>
             </div>
             
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
+
          );
     }
 }

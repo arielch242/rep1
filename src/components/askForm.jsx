@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
-import Form from './common/form.jsx';
-=======
 import React from "react";
 import Form from './common/form.jsx';
 import PageHeader from './common/pageHeader';
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
 
 class AskForm extends Form {
   state = {
@@ -16,10 +11,7 @@ class AskForm extends Form {
       topic: "",
       article: "",
     },
-<<<<<<< HEAD
-=======
     errors:{}
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
   };
 
   handleSubmit = (e) => {
@@ -29,15 +21,11 @@ class AskForm extends Form {
 
   render() {
     return (
-<<<<<<< HEAD
-      <section className="h-100 bg-img">
-=======
       <React.Fragment>
         <div className="container">
           <PageHeader titleText="AskForm"/>
         </div>
       <section className="container h-100 bg-img">
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
         <div className="row" style={{direction: "rtl"}}> 
           <div className="col-6 mx-auto">
             <h1 className="text-white text-right">כתוב שאלתך</h1>
@@ -80,10 +68,7 @@ class AskForm extends Form {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       </React.Fragment>
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
     );
   }
 }

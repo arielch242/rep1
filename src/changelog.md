@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-# 6: Pageheader
-create pageHeader component and replace all headers
-
-# 6: Routing step2 
-navbar.jsx
-change a to Link/NavLink
-
-
-# 6: Routing step1
-=======
 # 9: protected Route
 
 # 9:Get cards
@@ -113,21 +101,10 @@ change a to Link/NavLink
 
 # 6: Routing step1
 
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
 app.js
 import {Route,Switch} from 'react-router-dom';
 
 Switch>
-<<<<<<< HEAD
-          Route path="/about" component={About} />
-          Route path="/" component={Home}/>    
-/Switch>
-
-# 6: Create Router dom
-install package react-router-dom
-import {BrowserRouter} from 'react-router-dom';     - index.js
-
-=======
 Route path="/about" component={About} />
 Route path="/" component={Home}/>  
 /Switch>
@@ -136,7 +113,6 @@ Route path="/" component={Home}/>
 
 install package react-router-dom
 import {BrowserRouter} from 'react-router-dom'; - index.js
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
 
 # 5: create Footer & Header
 

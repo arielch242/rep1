@@ -1,15 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-/* import Qcard from './qcard';
- */
-class QnA extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div className="container">
-                <div className="row">
-          {/*           {<Qcard card={card}/>} */}
-=======
 import { Link } from 'react-router-dom';
 import cardService from '../services/cardService';
 import Card from './card';
@@ -48,7 +37,6 @@ async componentDidMount(){
                         {cards.length > 0 && 
                           cards.map((card)=> <Card key={card._id} card={card}/> )}
                     </div>
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
                 </div>
             </div>
          );

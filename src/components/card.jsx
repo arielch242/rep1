@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({card}) => {
     return <div className="col-md-6 col-lg-4 mt-3">
@@ -10,6 +11,8 @@ const Card = ({card}) => {
                     <p className="card-text border-top pt-2">{card.bizAddress}</p>
             </div>
         </div>
+        <Link to={`/cards/edit/${card._id}`}>Edit</Link>
+        <Link className="ml-2" to={`/cards/delete/${card._id}`}>Delete</Link>
     </div>
 }
 
