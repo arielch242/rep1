@@ -1,6 +1,8 @@
+# 9: protected Route
+
 # 9:Get cards
 create myCards page
-create a function to get cards from DB  (cardService.js)
+create a function to get cards from DB  (cardService.js) + services
 
 # 9:Create card
 create component and services and save cards on DB
