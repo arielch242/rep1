@@ -7,13 +7,25 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+<<<<<<< HEAD
     "bootstrap": "^4.5.2",
+=======
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.2",
+    "joi-browser": "^13.4.0",
+>>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+<<<<<<< HEAD
     "react-scripts": "3.4.3"
+=======
+    "react-scripts": "3.4.3",
+    "react-toastify": "^6.0.9",
+    "toastify": "^2.0.1"
+>>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
   },
   "scripts": {
     "start": "react-scripts start",

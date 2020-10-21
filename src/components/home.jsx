@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Form from './common/form.jsx';
 import PageHeader from "./common/pageHeader.jsx";
@@ -16,11 +17,19 @@ class Home extends Form {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(e);
+=======
+import React, { Component }from "react";
+import PageHeader from './common/pageHeader';
+
+class Home extends Component {
+  state = {
+>>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
   };
 
   render() {
     return (
       <React.Fragment>
+<<<<<<< HEAD
         <div className="container">
             <PageHeader titleText="Home"/>
         </div>
@@ -67,6 +76,12 @@ class Home extends Form {
           </div>
         </div>
       </section>
+=======
+        <div className="container bg-img min-vh-100 text-white text-right my-5">
+          <PageHeader titleText="ראשי"/>
+          <h1 className="display-4">ברוכים הבאים לאתר המקוון שאלות ותשובות של בית ההוראה נחלי צדק</h1>
+        </div>
+>>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
       </React.Fragment>
     );
   }

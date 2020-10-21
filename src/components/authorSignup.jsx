@@ -1,26 +1,15 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import PageHeader from './common/pageHeader';
-
-class Signup extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div className="container">
-                <PageHeader titleText="Signup"/>
-            </div>
-=======
 import React from 'react';
 import Joi from 'joi-browser';
-import {toast} from 'react-toastify';
+//import {toast} from 'react-toastify';
 
 import {apiUrl} from '../config.json';
 import http from '../services/httpService'
+import userService from '../services/userService';
 
 import PageHeader from './common/pageHeader';
 import Form from './common/form';
 
-class Signup extends Form {
+class AuthorSignup extends Form {
     state = {
         data: {
           name: "",
@@ -37,12 +26,14 @@ class Signup extends Form {
       };
 
       async doSubmit(){
-          const {history} = this.props;
-          const data = {...this.state.data,biz:false};
+          const data = {...this.state.data,biz:true};
+          console.log(data);
+          await http.post(`${apiUrl}/users`,data);
+          await userService.login(data.email,data.password);
+          console.log(userService.login(data.email,data.password));
+          window.location = "/create-card";
           try{
           await http.post(`${apiUrl}/users`,data);
-          toast('נפתח חשבון חדש');
-          history.replace("/signin");
           } catch (error){
               if( error.response && error.response.status === 400){
                 this.setState({
@@ -59,22 +50,26 @@ class Signup extends Form {
     render() { 
         return ( 
             <div className="container min-vh-100 bg-img text-white text-right">
-            <PageHeader titleText="הרשמה"/>
+            <PageHeader titleText=" הרשמה למשיב"/>
+                <div className="row">
+                    <div className="col-12">
+                        <p>הכנס את פרטיך</p>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-lg-6 mx-auto text-right">
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} autoComplete="off" noValidate>
                             {this.renderInput('name','שם')}
                             {this.renderInput('email','דוא"ל')}
                             {this.renderInput('password','סיסמה')}
-                            {this.renderButton('שלח')}
+                            {this.renderButton('הבא')}
                         </form>
                     </div>
                 </div>
             </div>
             
->>>>>>> 8c86c5d7fd1878c9053c382964cf3f5720e94fab
          );
     }
 }
  
-export default Signup;
+export default AuthorSignup;
