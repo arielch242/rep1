@@ -1,3 +1,6 @@
+# 10: edit & delete cards
+create edit and delete cards and services
+
 # 9: protected Route
 
 # 9:Get cards

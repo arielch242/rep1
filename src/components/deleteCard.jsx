@@ -5,8 +5,7 @@ class DeleteCard extends Component {
 
     async componentDidMount(){
         await cardService.deleteCard(this.props.match.params.id);
-        this.props.history.replace("/my-cards");
-
+        this.props.history.replace("/qna");
     }
 
     render() { 

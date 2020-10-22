@@ -19,6 +19,7 @@ class EditCard extends Form {
      };
 
      schema = {
+        _id:Joi.string(),
         bizName: Joi.string().min(2).max(255).required().label('Name'),
         bizDescription:  Joi.string().min(2).max(1024).required().label('Description'),
         bizAddress:  Joi.string().min(2).max(400).required().label('Address'),
@@ -31,13 +32,16 @@ class EditCard extends Form {
             _id:card._id,
             bizName:card.bizName,
             bizDescription : card.bizDescription,
+            bizAddress:card.bizAddress,
+            bizPhone:card.bizPhone,
          }
      }
 
      async componentDidMount(){
          const cardId = this.props.match.params.id;
          const {data} = await cardService.getCard(cardId);
-         this.setState({ data : this.mapToViewModel(data)})
+       //  console.log('date by getcard ',data);
+         this.setState({ data : this.mapToViewModel(data) })
      }
 
      doSubmit = async () => {
@@ -46,17 +50,17 @@ class EditCard extends Form {
          delete data.bizImage;      } */
       await cardService.setCard(data);
       toast('card was updated');
-      this.props.history.replace("/my-cards"); 
+      this.props.history.replace("/qna"); 
     };
 
     handleCancel = () => {
-        this.props.history.push("/my-cards");
+        this.props.history.push("/qna");
     }
 
     render() { 
         return (  
             <div className="container min-vh-100 bg-img text-white text-right">
-                <PageHeader titleText="צור כרטיס עסקים"/>
+                <PageHeader titleText="עדכון הכרטיס"/>
                 <div className="row">
                     <div className="col-12">
                         <p>פתח</p>
@@ -70,9 +74,9 @@ class EditCard extends Form {
                     {this.renderInput('bizAddress','Business Address')}
                     {this.renderInput('bizPhone','Business Phone')}
                     {this.renderInput('bizImage','Business Image')}
-                    {this.renderButton("Update Card")}
+                    {this.renderButton("עדכן")}
                     <button className="btn btn-secondary ml-2" onClick={this.handleCancel}>
-                        handleCancel</button>
+                        בטל</button>
                         </form>
                     </div>
                 </div>

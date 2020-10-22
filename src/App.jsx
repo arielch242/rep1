@@ -17,6 +17,8 @@ import Logout from "./components/logout";
 import AuthorSignup from "./components/authorSignup";
 import CreateCard from "./components/createCard.jsx";
 import QnA from "./components/qna";
+import EditCard from "./components/editCard";
+import DeleteCard from "./components/deleteCard";
 
 class App extends Component {
     state = {};
@@ -37,6 +39,8 @@ class App extends Component {
       </header>
       <main className="container-fluid flex-fill">
         <Switch>
+          <Route path="/cards/edit/:id" component={EditCard}/>
+          <Route path="/cards/delete/:id" component={DeleteCard}/>
           <Route path="/logout" component={Logout} />
           <Route path="/create-card" component={CreateCard} />
           <Route path="/AuthorSignup" component={AuthorSignup} />
